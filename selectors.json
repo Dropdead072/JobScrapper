@@ -1,0 +1,4 @@
+{
+    "AVITO" : {"CSS_SELECTOR":"div.vacancies-section__item"},
+    "OZON" : {"EMPTY":"EMPTY"}
+}
