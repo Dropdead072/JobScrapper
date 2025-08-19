@@ -19,7 +19,7 @@ agents['USER_AGENTS']
 user_agent = agents['USER_AGENTS']
 
 
-def scrape_site_for_links(url, item_selector):
+def scrape_site_for_links(url: str, item_selector: str) -> list[dict]:
     '''
     Simple scraper that gets a complete URL with the selected interests
     '''
@@ -57,9 +57,9 @@ def scrape_site_for_links(url, item_selector):
     return link_list
 
 
-def read_page_for_content(url, item_selector):
+def read_page_for_content(url: str, item_selector: str) -> list[str]:
     '''
-    
+    Scraper for page content
     '''
     options = Options()
     options.add_argument("--headless")
@@ -93,8 +93,9 @@ def read_page_for_content(url, item_selector):
     return text_list
 
 
-def scrape_site_for_links_emulate_clicks(url, target_vac, menu_selector, item_selector):
+def scrape_site_for_links_emulate_clicks(url: str, target_vac: str, menu_selector: str, item_selector:str) -> list[dict]:
     '''
+    Scraper that emulates user interactions and works with selectors
     url: str - link to the site
     target_vac: str - prof area selection
     menu_selector: str - menu class
