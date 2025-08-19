@@ -1,4 +1,5 @@
 {
-    "AVITO" : {"CSS_SELECTOR":"div.vacancies-section__item"},
+    "AVITO" : {"CSS_SELECTOR":"div.vacancies-section__item",
+                "SECTION_SELECTOR": "section.vacancies-detail__description"},
     "OZON" : {"EMPTY":"EMPTY"}
 }
