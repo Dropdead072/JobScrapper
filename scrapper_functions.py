@@ -12,7 +12,7 @@ import random
 
 SCHEDULE = (1, 2)
 
-with open('agents.json', 'r', encoding='utf-8') as file:
+with open('json_data\\agents.json', 'r', encoding='utf-8') as file:
     agents = json.load(file)
 
 agents['USER_AGENTS']
@@ -130,7 +130,7 @@ def scrape_site_for_links_emulate_clicks(url, target_vac, menu_selector, item_se
         while True:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(random.uniform(SCHEDULE[0], SCHEDULE[1]))
-            
+
             new_height = driver.execute_script("return document.body.scrollHeight")
             if new_height == last_height:
                 break
